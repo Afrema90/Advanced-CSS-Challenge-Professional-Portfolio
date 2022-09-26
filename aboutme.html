@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+nav {
+            margin: 27px auto 0;
+            position: relative;
+            width: 500px;
+            height: 50px;
+            background-color: #34495e;
+            border-radius: 8px;
+            font-size: 0;
+        }
+
+        nav a {
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+
+         nav .animation {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+            border-radius: 8px;
+        }
+
+        a:nth-child(1) {
+            width: 100px;
+        }
+
+        a:nth-child(2) {
+            width: 110px;
+        }
+
+        a:nth-child(3) {
+            width: 100px;
+        }
+
+        a:nth-child(4) {
+            width: 130px;
+        }
+        
+        nav .start-home,
+        a:nth-child(1):hover~.animation {
+            width: 100px;
+            left: 0;
+            background-color: #1abc9c;
+        }
+
+        nav .start-about,
+        a:nth-child(2):hover~.animation {
+            width: 110px;
+            left: 100px;
+            background-color: #e74c3c;
+        }
+
+        nav .start-blog,
+        a:nth-child(3):hover~.animation {
+            width: 100px;
+            left: 210px;
+            background-color: #3498db;
+        }
+
+        nav .start-portefolio,
+        a:nth-child(4):hover~.animation {
+            width: 150px;
+            left: 300px;
+            background-color: #9b59b6;
+        }
+
+        /* nav .start-contact,
+        a:nth-child(5):hover~.animation {
+            width: 120px;
+            left: 470px;
+            background-color: #e67e22;
+        } */
+
+        .body {
+            font-size: 12px;
+            font-family: sans-serif;
+            background: #2c3e50;
+        }
+
+        .name {
+            text-align: center;
+            margin: 40px 0 40px;
+            text-align: center;
+            font-size: 30px;
+            color: black;
+            text-shadow: 2px 2px 4px #000000;
+            font-family: 'Cherry Swash', cursive;
+        }
+
+        .h4c {
+            text-align: center;
+            color: black;
+            font-family: 'Cherry Swash', cursive;
+            font-size: 24px;
+        }
+
+        span {
+            color: #2BD6B4;
+        }  
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .profile {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+/* 
+        .container {
+            width: 100%;
+            background-color: #ddd;
+        } */
+
+        .skills_container {
+            width: 60%;
+            align-items: center;
+            margin: auto;
+        }
+
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 60px;
+            background-color:aliceblue;
+        }
+
+        @keyframes load {
+            from {
+                width: 0%
+            }
+        }
+
+        @-webkit-keyframes load {
+            from {
+                width: 0%
+            }
+        }
+
+        @-moz-keyframes load {
+            from {
+                width: 0%
+            }
+        }
+
+        @-o-keyframes load {
+            from {
+                width: 0%
+            }
+        }
+
+        .bar {
+            background-color: #EEE;
+            padding: 2px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #FFF;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .bar::before {
+            content: attr(data-skill);
+            background-color: #f3b0ff;
+            display: inline-block;
+            padding: 5px 0 5px 10px;
+            border-radius: inherit;
+            animation: load 2s 0s;
+            -webkit-animation: load 2s 0s;
+            -moz-animation: load 2s 0s;
+            -o-animation: load 2s 0s;
+        }
+
+        .bar.front::before {
+            background-color: #ffcc33;
+        }
+
+        .bar.back::before {
+            background-color: #a6cfe3;
+        }
+
+        .bar.learning::before {
+            width: calc(20% - 10px);
+        }
+
+        .bar.basic::before {
+            width: calc(40% - 10px);
+        }
+
+        .bar.intermediate::before {
+            width: calc(60% - 10px);
+        }
+
+        .bar.advanced::before {
+            width: calc(80% - 10px);
+        }
+
+        .bar.expert::before {
+            width: calc(100% - 10px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="name">Ama Frema</h1>
+    <nav>
+        <a href="/Users/amafrema/Desktop/Module-2-Challenge/aboutme.html">About Me</a>
+        <a href="/Users/amafrema/Desktop/Module-2-Challenge/portfolio.html">Portfolio/Wip</a>
+        <a href="/Users/amafrema/Desktop/Module-2-Challenge/contactme.html">Contact</a>
+        <a href="/Users/amafrema/Desktop/Module-2-Challenge/resume.html">Resumé</a>
+        <div class="animation start-home"></div>
+    </nav>
+    <br>
+    <div class="card">
+        <img src="assets/images/profile picture.jpeg" height="400" width="320">
+        <h1>Ama Frema</h1>
+        <p class="title"> Web Developer</p>
+        <p class="uconn">Uconn</p>
+        <div>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+        <p class="button_p"><button class="button_contact" onclick="location.href='/Users/amafrema/Desktop/Module-2-Challenge/contactme.html'">Contact</button></p>
+    </div>
+    <div class="profile">
+        <h1 style="text-align:center;">A Little About Me</h1>
+        <p>Welcome! My name is <b>Ama Frema</b>. I am from New Britain,Conneticut. I know I can help your
+            company crei got my first start at creating and desiner at the time when my sapce
+            was the new socialmedia out and all was using it and had to had to pick your
+            background i loved that, so that when my love began.i have been in the healthcare
+            filed for a long time and wanted a change so i started a school and a coder and a
+            webdesigner at uconn and here we are. when am not work on my latest graphic design
+            project,you will probably find me somewhere in the house reading a book or listing
+            to a book,cudding with my kids or volunteering at my church with cleaning up.I am
+            fully invested in my church community and love working brands that shares valus.
+            When your ready for your brand to reach its next levele of success, call or email
+            me. I have the right tools and experties to turn your brand into a household
+            name.See it for yourself in my "work" section."if you like my works, please reach
+            out to me by filling in the contact form below. I cant wait to learn about your
+            brand's and design needs. Are you interested in working with me?<a href='/Users/amafrema/Desktop/Module-2-Challenge/contactme.html'>Contact Me</a>.</p>
+    </div>
+    <br>
+    <div class="container">
+        <h1 style="text-align:center;">Skill Set</h1>
+        <div class="bar learning" data-skill="PHP"></div>
+        <div class="bar back basic" data-skill="JAVASCRIPT"></div>
+        <div class="bar front advanced" data-skill="CSS3"></div>
+        <div class="bar front expert" data-skill="HTML5"></div>
+    </div>
+    <br>
+</body>
+
+</html>
